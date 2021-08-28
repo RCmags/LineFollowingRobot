@@ -7,7 +7,7 @@ In an effort to improve the low speed performance,
 the speed of the motors is controlled via [pulse frequency modulation](https://en.wikipedia.org/wiki/Pulse-frequency_modulation).
 This allows the motors to be moved under the influence of cogging torque and stiction as the pulses act like a jackhammer.
 The end result is motion similar to stepper motor as the motor moves in discrete jumps of variable length.
-At higher throttle settings, the motors twitch over to [PWM](https://en.wikipedia.org/wiki/Pulse-width_modulation) as the motion tends to be smoother.  
+At higher throttle settings the motors switch over to [PWM](https://en.wikipedia.org/wiki/Pulse-width_modulation) to smoothen the motion.  
 
 The code requires a circuit like the one shown in this schematic:  
 <img src="https://github.com/RCmags/LineFollowingRobot/blob/main/line_follower_robot_schem.png" width="80%"></img>
