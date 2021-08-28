@@ -9,6 +9,9 @@ This allows the motors to be moved under the influence of cogging torque and sti
 The end result is motion similar to stepper motor as the motor moves in discrete jumps of variable length.
 At higher throttle settings, the motors twitch over to [PWM](https://en.wikipedia.org/wiki/Pulse-width_modulation) as the motion tends to be smoother.  
 
+The code requires a circuit like the one shown in this schematic:  
+<img src="https://github.com/RCmags/LineFollowingRobot/blob/main/line_follower_robot_schem.png" width="80%"></img>
+
 Below are images of the vehicle this code was written for:  
 <img src="https://github.com/RCmags/LineFollowingRobot/blob/main/img/bottom_view_res.jpg" width="30%"></img>
 <img src="https://github.com/RCmags/LineFollowingRobot/blob/main/img/diag_view_res.jpg" width="30%"></img>
