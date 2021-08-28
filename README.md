@@ -1,5 +1,5 @@
 # LineFollowingRobot
-This is an arduino sketch for a line following robot based on infrared LED's and an H-bridge. 
+This is an arduino sketch for a [line following robot](https://www.electronicshub.org/arduino-line-follower-robot/) based on infrared LED's and an H-bridge. 
 The code uses a PID controller to control the wheels of the vehicle so it steers into a dark line. 
 To improve the likelihood of the vehicle from sliding off the line, 
 the code decreases the speed of the robot when it enters a sharp turn. 
