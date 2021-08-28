@@ -3,68 +3,68 @@
 //------ Output Pin numbers -------
 
     //Left motor:
-constexpr int INPUT_PIN_L 	= 6;
-constexpr int PIN_A_L 		= 7;
-constexpr int PIN_B_L 		= 8;
+constexpr int INPUT_PIN_L   = 6;
+constexpr int PIN_A_L       = 7;
+constexpr int PIN_B_L       = 8;
     //Right motor:
-constexpr int INPUT_PIN_R 	= 3;
-constexpr int PIN_A_R 		= 4;
-constexpr int PIN_B_R 		= 5;
+constexpr int INPUT_PIN_R   = 3;
+constexpr int PIN_A_R       = 4;
+constexpr int PIN_B_R       = 5;
     //Analog inputs: [sensor]
-constexpr int PIN_SENSOR_A 	= A0;
-constexpr int PIN_SENSOR_B 	= A1;
+constexpr int PIN_SENSOR_A  = A0;
+constexpr int PIN_SENSOR_B  = A1;
 
 
 //-- Motor control: 
-constexpr int PWM_MAX 			= 255;
-constexpr uint32_t ON_INTERVAL 	= 7000; //9000;
-constexpr float INPUT_MIN 		= 5.0;
-constexpr int MOD_TRANSITION 	= 120.0;
+constexpr int PWM_MAX           = 255;
+constexpr uint32_t ON_INTERVAL  = 7000; //9000;
+constexpr float INPUT_MIN       = 5.0;
+constexpr int MOD_TRANSITION    = 120.0;
 
 
 //-- Proportional - Derivative parameters:
-constexpr float EXP_SMOOTH 	= 0.4;
+constexpr float EXP_SMOOTH  = 0.4;
      //Derivative filter:
 constexpr float COEFF_DEV[] = {5, 8, 27, 48, 42, 0, -42, -48, -27, -8, -5}; 
-constexpr float DENOM_DEV 	=  512.0; 
-constexpr int 	N_STORED 	= sizeof(COEFF_DEV)/sizeof( COEFF_DEV[0] );
+constexpr float DENOM_DEV   =  512.0; 
+constexpr int   N_STORED    = sizeof(COEFF_DEV)/sizeof( COEFF_DEV[0] );
     //2nd derivative filter:
 constexpr float COEFF_DEV_2[N_STORED] = {15, 6, -1, -6, -9, -10, -9, -6, -1, 6, 15};
 constexpr float DENOM_DEV_2 = 429.0 ;
      //Proportional filter
 constexpr float COEFF_PRO[N_STORED] = {-4, -20, -20, 80, 280, 392, 280, 80, -20, -20, 4};
-constexpr float DENOM_PRO 	= 1024.0;
+constexpr float DENOM_PRO   = 1024.0;
      //Integration of sensor [Quadrature]
 constexpr float COEFF_INT[] = { 7, 12, 15, 16, 15, 12, 7 };
-constexpr float DENOM_INT 	= 14.0;
-constexpr int 	N_INT 		= sizeof(COEFF_INT)/sizeof( COEFF_INT[0] ); 
+constexpr float DENOM_INT   = 14.0;
+constexpr int   N_INT       = sizeof(COEFF_INT)/sizeof( COEFF_INT[0] ); 
 
      //Control coefficients:
-constexpr float K_PROP		= 0.25; // 0.25;
-constexpr float K_DEV 		= 5.0; // 6.0;
-constexpr float K_DEV_2		= 20.0; // 20.0;
-constexpr float K_INT 		= 0.0005;
+constexpr float K_PROP      = 0.25; // 0.25;
+constexpr float K_DEV       = 5.0; // 6.0;
+constexpr float K_DEV_2     = 20.0; // 20.0;
+constexpr float K_INT       = 0.0005;
 // Anti wind-up limit:
-constexpr float INT_LIMIT 	= 100.0;
+constexpr float INT_LIMIT   = 100.0;
 // Threshold to enable integration
-constexpr float INT_ENABLE 	= 0.1;
+constexpr float INT_ENABLE  = 0.1;
 
 
 //-- Foward throttle parameters:
-constexpr int 	N_INITIAL 		= 1000;
-constexpr int 	FOR_THROTTLE 	= 150;
-constexpr float DECAY 			= 0.01;
+constexpr int   N_INITIAL       = 1000;
+constexpr int   FOR_THROTTLE    = 150;
+constexpr float DECAY           = 0.01;
 constexpr float PERCENT_INITIAL = 0.9;
-constexpr float MOTOR_BIAS 		= 0.01;
+constexpr float MOTOR_BIAS      = 0.01;
 // Threshold when throttle is reduced
-const float 	TURN_LIMIT 		= 20000;
+const float     TURN_LIMIT      = 20000;
 
 
 //-- Global variables:
-float 	past_average[N_STORED] = {0};
-int 	input_initial 	= 0;
-int 	diff_initial 	= 0;
-float 	forward 		= 0;
+float   past_average[N_STORED] = {0};
+int     input_initial   = 0;
+int     diff_initial    = 0;
+float   forward         = 0;
 
 
 //----- Motor control: --
@@ -74,13 +74,13 @@ class pulse {
   public:
     int freq_mod;
 
-	//Constructor
+    //Constructor
     pulse( void ) {
      last_time = 0;
      freq_mod = 0;   
      off_interval = 0;
     }
-	//Destructor
+    //Destructor
     ~pulse ( void ) {}
 
     void set_period( float input ) {
