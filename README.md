@@ -15,4 +15,6 @@ The code requires a circuit like the one shown in this schematic:
 Below are images of the vehicle this code was written for:  
 <img src="https://github.com/RCmags/LineFollowingRobot/blob/main/img/bottom_view_res.jpg" width="30%"></img>
 <img src="https://github.com/RCmags/LineFollowingRobot/blob/main/img/diag_view_res.jpg" width="30%"></img>
-<img src="https://github.com/RCmags/LineFollowingRobot/blob/main/img/top_view_res.jpg" width="30%"></img>
+<img src="https://github.com/RCmags/LineFollowingRobot/blob/main/img/top_view_res.jpg" width="30%"></img>  
+
+Here's a video of the robot working: [Line following robot - Arduino](https://www.youtube.com/watch?v=NBQjQLE4u1M)
