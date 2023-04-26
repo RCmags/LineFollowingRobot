@@ -10,7 +10,7 @@ The speed of the motors is controlled via [pulse frequency modulation](https://e
 The code requires a circuit like the one shown in this schematic:  
 
 <p align="center">
-<img src="/main/images/diagram/schematic.png" width="80%"></img>
+<img src="/images/diagram/schematic.png" width="80%"></img>
 </p>
 
 ## Example
