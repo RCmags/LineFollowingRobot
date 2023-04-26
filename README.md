@@ -10,16 +10,16 @@ The speed of the motors is controlled via [pulse frequency modulation](https://e
 The code requires a circuit like the one shown in this schematic:  
 
 <p align="center">
-<img src="https://github.com/RCmags/LineFollowingRobot/blob/main/line_follower_robot_schem.png" width="80%"></img>
+<img src="/main/images/diagram/schematic.png" width="80%"></img>
 </p>
 
 ## Example
 Below are images of the robot this code was written for:  
 
 <p align="center">
-<img src="https://github.com/RCmags/LineFollowingRobot/blob/main/img/bottom_view_res.jpg" width="28%"></img>
-<img src="https://github.com/RCmags/LineFollowingRobot/blob/main/img/diag_view_res.jpg" width="28%"></img>
-<img src="https://github.com/RCmags/LineFollowingRobot/blob/main/img/top_view_res.jpg" width="28%"></img>  
+<img src="/images/example/bottom_view_res.jpg" width="28%"></img>
+<img src="/images/example/diag_view_res.jpg" width="28%"></img>
+<img src="/images/example/top_view_res.jpg" width="28%"></img>  
 </p>
 
 Here's a [video](https://www.youtube.com/watch?v=NBQjQLE4u1M) of the same robot in operation: 
